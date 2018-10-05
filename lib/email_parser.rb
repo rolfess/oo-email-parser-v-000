@@ -1,6 +1,6 @@
 require 'pry'
 class EmailParser
-   attr_accessor :emails, :email
+   attr_accessor :emails, :parser
    @@all = []
 
    def self.all
@@ -11,9 +11,9 @@ class EmailParser
    end
 
    def parse (emails)
-     email = self.new
-     email.emails = emails.split(" ")
-     @all << email
+     parser = self.new
+     parser.emails = emails.split(" ")
+     @all << parser
      binding.pry
    end
 
