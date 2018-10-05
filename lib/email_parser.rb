@@ -6,9 +6,8 @@ class EmailParser
      @emails = emails
    end
 
-   def parse (emails)
-     self.emails.split(" ")
-     binding.pry
+   def parse 
+     self.emails.split(", ")
    end
 
 
