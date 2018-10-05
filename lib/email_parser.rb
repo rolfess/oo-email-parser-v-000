@@ -1,19 +1,13 @@
 require 'pry'
 class EmailParser
-   attr_accessor :emails, :parser
-   @@all = []
+   attr_accessor :emails
 
-   def self.all
-     @@all
+   def initialize (emails)
+     @emails = emails
    end
-   def save
-     self.class.all << self
-   end
-
+   
    def parse (emails)
-     parser = self.new
-     parser.emails = emails.split(" ")
-     @all << parser
+     self.emails.split(" ")
      binding.pry
    end
 
